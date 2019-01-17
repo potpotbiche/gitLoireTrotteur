@@ -1,0 +1,137 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+a, a:hover, a:focus  {
+	color: black
+}
+
+.home_bg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+
+}
+
+.logo_bg {
+  width:100%;
+}
+
+.home_bar {
+	background-image:url("https://www.lapausejardin.fr/sites/lapausejardin.fr/files/styles/article_main_new/public/user-files/article/main-image/01-14/fr_azlb0322.jpg?itok=cWEHX-RB");
+	background-size:100%;
+	height:120px;
+	box-shadow: 0px 0px 16px 0px grey;
+	display:flex;
+	justify-content: center;
+	margin-bottom:20px;
+}
+
+.home_bar_img {
+	width: 60%;
+}
+
+.home_text {
+	margin-top:20px;
+	padding-left:5px;
+	color: #E2366E;
+	font-weight: bolder;
+	text-align: center;
+}
+
+.p_text {
+	text-align: center;
+	margin-bottom:60px;
+}
+
+.desc_text {
+	font-size: 15px;
+	padding:20px;
+}
+
+.home_list {
+	margin-right:5px;
+}
+.home_list img {
+	width: 15px;
+}
+
+.parcours {
+	justify-content: center;
+}
+
+.fa-arrow-down {
+	cursor:pointer;
+}
+
+.parcours1, .parcours2, .parcours3, .parcours4 {
+	font-weight: bolder;
+	cursor:pointer;
+}
+
+.parcours1_detail, .parcours2_detail, .parcours3_detail, .parcours4_detail {
+	display: none;
+	margin-top:10px;
+	padding-left: 25px !important;
+}
+
+.acces_map {
+	text-align: right;
+	display:block;
+	text-decoration: underline;
+	font-size:16px;
+	margin-top:10px;
+	margin-right:10px;
+}
+
+.center {
+	text-align: center;
+}
+
+.instagram_title {
+	margin-bottom: 30px;
+}
+
+.image_home {
+	width:100%;
+	border:3px solid white;
+}
+
+.images_home {
+	width:50%;
+	border:3px solid white;
+}
+
+.reseaux {
+	margin-top: 10px;
+	width:100%;
+	height:35px;
+	font-size: 20px;
+	justify-content: center;
+	background: #E2366E;
+	display: flex;
+	box-shadow: 0px 0px 8px 0px grey;
+}
+
+.reseaux i {
+	color: white !important;
+}
+
+.reseaux .fa-twitter-square {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+body #map .mapboxgl-popup{
+  transform: translate(0%, 434%) translate(10px, 125px) !important;
+      width: 400px;
+}
+body #map .mapboxgl-popup .mapboxgl-popup-tip{
+  display: none;
+}
