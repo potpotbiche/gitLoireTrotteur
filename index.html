@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Fête du vélo 2019</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <link rel="shortcut icon" href="images/icon_logo.ico">
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+<div style="max-width: 425px;" id='map'></div>
+<nav id='filter-group' class='filter-group'></nav>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYXVndXN0aW5wIiwiYSI6ImNqbzhmMWZqbTE2NGozcW5sZWF1em5jazIifQ.VK-B3JOdFS-SNGfDS54WBA';
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/augustinp/cjo8rpd0x173i2sqwm6zaj2wm',
+  center: [-0.417342, 47.261109],
+  zoom: 9.4
+});
+map.on('click', function(e) {
+  var features = map.queryRenderedFeatures(e.point, {
+    layers: ['fdv'] // replace this with the name of the layer
+  });
+
+  if (!features.length) {
+    return;
+  }
+
+  var feature = features[0];
+
+  var popup = new mapboxgl.Popup({ offset: [0, -15] })
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML('<h3>' + feature.properties.name + '</h3><p>' + feature.properties.description + '</p>')
+    .setLngLat(feature.geometry.coordinates)
+    .addTo(map);
+});
+
+</script>
+
+</body>
+</html>
