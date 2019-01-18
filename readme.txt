@@ -1,1 +1,2 @@
 Bienvenue sur le Loire Trotteur
+Le loire trotteur est une web app qui permet aux participants de la fête du vélo début Juin à coté d'Angers, de connaitre le lieu de points d'intéret, de voir 3 parcours différents tous ça grâce à leur smartphone.
